@@ -1,0 +1,1089 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Bitter', serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.theme-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bg-center {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.flex-mode {
+	display: flex;
+}
+
+.general-padding {
+	padding: 15px;
+}
+
+.p-style {
+	line-height: 1.5;
+    letter-spacing: 1.2px;
+    font-size: 0.9rem;
+}
+
+.is-black {
+	color: black !important;
+}
+
+/*
+|------------------------------------------
+|  header
+|------------------------------------------
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    will-change: top;
+    transition: top .3s ease;
+    z-index: 999;
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+header.header-up {
+    top: -100px;
+    box-shadow: none;
+}
+
+.img-wrap {
+    flex-grow: 1;
+}
+
+header .img-link {
+    display: inline-block;
+}
+
+header img {
+  height: 50px;
+}
+
+/*
+|------------------------------------------
+|  Burger
+|------------------------------------------
+*/
+
+.gn-trigger {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	border: none;
+	outline: 0;
+	background: transparent;
+}
+
+.burger {
+	position: absolute;
+	background: #8d91aa;
+	width: 30px;
+	height: 3px;
+	right: 0px;
+	top: 50%;
+	border-radius: 40%;
+}
+
+.burger:before,
+.burger:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: #8d91aa;
+	width: 30px;
+	height: 3px;
+	right: 0;
+	border-radius: 40%;
+}
+
+.burger:before {
+	top: 7px;
+}
+
+.burger:after {
+	bottom: 7px;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+	transition-property: transform, top, background;
+	transition-duration: .35s;
+	
+}
+
+.gn-trigger.is-active .burger:before {
+	transform: rotate(45deg);
+	top: -2px;
+}
+
+.gn-trigger.is-active .burger:after {
+	transform: rotate(-45deg);
+	bottom: 2px;
+}
+
+.gn-trigger.is-active .burger {
+	background: rgba(117, 111, 102, 0);
+}
+
+/*
+|------------------------------------------
+|  Global Navigation
+|------------------------------------------
+*/
+.gn {
+	display: none;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	background: #fff;
+}
+
+.gn li {
+	text-transform: uppercase;
+	font-size: 18px;
+	border-bottom: 1px solid black;
+}
+
+.gn li:last-child {
+	border: none;
+	box-shadow: -1px 4px 5px 0px rgba(71,71,71,.65);
+}
+
+.gn a {
+	text-decoration: none;
+	color: #756f66;
+	padding: 12px 70px;
+	display: block;
+	text-align: right;
+}
+
+/*
+|------------------------------------------
+|  Banner
+|------------------------------------------
+*/
+
+.home-bnr {
+	background-color: #fff;
+	min-height: 45vh;
+	transform: translateY(10rem);
+	animation: slideUp 900ms linear forwards;
+	-webkit-animation: slideUp 900ms linear forwards;
+}
+
+.home-bnr h1 {
+	font-size: 40px;
+	font-weight: 500;
+	margin: 50px 0 5px;
+	color: #c17d89;
+}
+
+.home-bnr span {
+	letter-spacing: 1.5px;
+	color: #c17d89;
+}
+
+.home-bnr-img1 {
+	background-image: url(../images/tesla-thumb.jpg);
+	min-height: 430px;
+}
+
+.home-bnr-sub p {
+	color: #c17d89;
+	font-size: 25px !important;
+}
+
+.bnr .bnr-sub {
+	opacity: 0;
+	animation: slideUpSub 1200ms linear forwards;
+}
+/*
+|------------------------------------------
+|  Featured Work
+|------------------------------------------
+*/
+.content h2 {
+	margin: 0 0 90px;
+    color: #919191;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #f6f6f6;
+}
+
+.content h3 {
+	margin: 45px 0 5px;
+    color: #262626;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.featured-work {
+	padding: 75px 0;
+	border-bottom: 3px solid #f6f6f6;
+}
+
+.featured-work-thumb {
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgb(40 54 77 / 90%);
+}
+
+.featured-work-thumb:last-child {
+	border-bottom: none;
+}
+
+.featured-work ul {
+	margin: 15px 10px;
+}
+
+.featured-work li {
+	text-transform: uppercase;
+    font-weight: 600;
+    margin: 15px 0;
+    font-size: 15px;
+    letter-spacing: 1.25px;
+}
+
+.icon {
+	width: 20px;
+}
+
+.view-detail {
+	background: #8d91aa !important;
+}
+
+.cus-div {
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+#skew1 {
+	background-color: #c17d89;
+	z-index: 10;
+}
+
+.featured-work-heading {
+	height: 50px;
+}
+
+#skew2 {
+	background: #fff;
+	z-index: 9;
+	height: auto;
+}
+
+.content {
+	padding: 100px 27px;
+	overflow: hidden;
+	display: block;
+	height: auto;
+}
+
+.home-bnr-btn {
+	text-decoration: none;
+	color: #fff;
+	background: black;
+	display: inline-block;
+	font-size: 18px;
+	padding: 13px 25px;
+	margin-top: 20px;
+	border-radius: 22px;
+	font-weight: 900;
+}
+
+.content p {
+	line-height: 1.5;
+	margin: 10px 0;
+	font-weight: 400;
+}
+/*
+|------------------------------------------
+|  Work
+|------------------------------------------
+*/
+.project h1 {
+	font-size: 60px;
+	font-weight: 500;
+	text-align: center;
+	padding-top: 120px;
+	color: #8d91aa;
+	position: relative;
+}
+
+.project {
+	padding: 0 15px;
+}
+.project h3 {
+	color: #16115c;
+	font-size: 30px;
+	text-align: center;
+	margin: 22px 0 12px;
+}
+
+.project .tool {
+	padding-bottom: 18px;
+}
+
+.project-thumb {
+	margin: 100px 0;
+    text-align: center;
+    background-color: #eee;
+}
+
+/*
+|------------------------------------------
+|  About
+|------------------------------------------
+*/
+
+.about-bnr {
+	height: 350px;
+	background: #ead9cb;
+	line-height: 1.3;
+	padding-top: 100px;
+}
+
+.about-bnr p {
+	position: relative;
+	color: #c17d89;
+	font-size: 17px;
+}
+
+.about-bnr p:after {
+	position: absolute;
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    z-index: 0;
+    background: white;
+    top: 18px;
+    left: -1px;
+}
+
+.about-bnr h1 {
+	font-size: 40px;
+	padding-top: 30px;
+	padding-left: 15px;
+	color: black;
+	font-size: 30px;
+}
+
+.about-bnr span {
+	font-size: 25px;
+}
+
+.profile p {
+	margin-bottom: 15px;
+}
+
+.profile span {
+	color: #c17d89;
+	font-weight: 900;
+}
+
+.profile-image {
+	text-align: center;
+	background: #ead9cb;
+}
+
+.profile-image img {
+	width: 210px;
+	padding: 20px 0;
+	border-radius: 15%;
+}
+
+.skills ul,
+.hobbies ul,
+.profile ul,
+.overview ul {
+	list-style: square;
+	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
+.skills h2 {
+	font-size: 25px;
+}
+
+.skills h3 {
+	font-size: 20px;
+}
+
+/*
+|------------------------------------------
+|  Footer
+|------------------------------------------
+*/
+.footer {
+	background-color: #c17d89;
+	height: 230px;
+}
+
+.footer h2 {
+	font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 45px 10px 0;
+    text-transform: uppercase;
+}
+
+.contact {
+	justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+	width: 30px;
+	margin: 10px;
+}
+
+.footer p {
+	color: #fff;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+}
+
+.footer .mail {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+}
+
+/*
+|------------------------------------------
+|  Artifact
+|------------------------------------------
+*/
+.title {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.tesla-1 {
+	background-image: url(../images/artifact-banner-tesla.jpg);
+}
+
+.sdd-1 {
+	background-image: url(../images/sdd-1.jpg);
+}
+
+.shoe-1 {
+	background-image: url(../images/artifact-banner-drmartens.jpg);
+}
+
+.pokedex-1 {
+	background-image: url(../images/artifact-banner-pokedex.jpg);
+}
+
+.styleguide-1 {
+	background-image: url(../images/artifact-banner-style.jpg);
+}
+
+
+.title h1 {
+	font-size: 40px;
+	position: absolute;
+    top: 50%;
+    left: 40%;
+	border-bottom: 1px solid currentColor;
+	font-weight: 400;
+    color: #fff;
+    transform: translateY(2rem);
+	animation: slideUp 900ms linear forwards;
+	-webkit-animation: slideUp 900ms linear forwards;
+}
+
+.title img {
+	width: 17rem;
+}
+
+.artifact h2 {
+	font-size: 25px;
+	margin: 15px 0 0;
+	color: #16115c;
+}
+
+.artifact h3 {
+	font-size: 22px;
+	color: #ead9cb;
+	padding: 10px 0 5px 0;
+}
+
+.artifact h4 {
+	padding: 10px 0;
+}
+
+.artifact a {
+	text-decoration: none;
+	color: #8d91aa;
+}
+
+.process img {
+	padding: 30px 0;
+}
+
+.live-website {
+	text-align: center;
+	margin: 25px 0;
+}
+
+.live-website a {
+	color : #c17d89;
+	border: 1px solid #c17d89;
+	padding: 10px 20px;
+	border-radius: 25px;
+	box-shadow: 1px 6px 8px 0px rgb(71 71 71 / 65%);
+	font-size: 18px;
+}
+
+.artifact-2-wall {
+	background-image: url(../images/tesla-thumb.jpg);
+}
+
+.artifact-5-wall {
+	background-image: url(../images/sdd-thumb.jpg);
+}
+
+/*
+|------------------------------------------
+|  404 Page Not Found
+|------------------------------------------
+*/
+.not-found-main {
+	height: calc( 100vh - 230px);
+	text-align: center;
+	padding: 150px 0;
+}
+
+.not-found-main h1 {
+	font-size: 60px;
+}
+
+.not-found-main a {
+	color: #000;
+}
+/*
+|------------------------------------------
+|------------------------------------------
+|  Media Queries
+|------------------------------------------
+|------------------------------------------
+*/
+@media (min-width: 576px) {
+
+	.gn a {
+		padding: 12px 90px;
+	}
+
+	.home-bnr h1 {
+		font-size: 60px;
+	}
+
+	.home-bnr span {
+		font-size: 23px;
+		letter-spacing: 3.5px;
+	}
+
+	.content p {
+		font-size: 21px;
+	}
+
+	.content a {
+		font-size: 20px;
+	}
+
+	.content h2 {
+		font-size: 40px;
+		padding-bottom: 50px;
+	}
+
+	.featured-work {
+   		padding: 75px 80px;
+   	}
+
+	.footer h2 {
+		padding: 65px 10px 0;
+	}
+
+	.footer p {
+		font-size: 15px;
+	}
+
+	.category h1 {
+		font-size: 50px;
+	}
+
+	.category {
+		height: 220px;
+	}
+
+	.project h2 {
+		font-size: 32px;
+	}
+
+	.project-thumb {
+	}
+
+	.project-thumb img {
+		width: 100%;
+	}
+
+	.about-bnr p {
+		font-size: 23px;
+	}
+
+	.about-bnr p:after {
+		width: 105px;
+    	top: 23px;
+    	height: 5px;
+	}
+
+	.about-bnr h1 {
+		font-size: 42px;
+	}
+
+	.p-style {
+		font-size: 1rem;
+	}
+
+	.skills h2 {
+		font-size: 30px;
+	}
+
+	.skills h3 {
+	    font-size: 25px;
+	}
+
+	.wall-height {
+		height: 18rem;
+	}
+
+	.title h1 {
+		font-size: 60px;
+	}
+
+	.artifact h2 {
+		font-size: 30px;
+	}
+
+	.process img {
+	    padding: 70px 0;
+	}
+
+	.not-found-main {
+		padding: 250px 0;
+	}
+}
+
+@media (min-width: 768px) {
+
+	header img {
+		height: 70px;
+	}
+
+	.gn-trigger {
+		display: none;
+	}
+
+	.gn {
+		display: block !important;
+		position: static;
+	}
+
+	.gn-items {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.gn li {
+		border-bottom: transparent;
+	}
+
+	.gn li:last-child {
+		box-shadow: none;
+	}
+
+	.gn a {
+		padding: 15px;
+	}
+
+	.content p {
+		margin: 20px 0;
+	}
+
+	.content a {
+	    font-size: 25px;
+	    border-radius: 25px;
+	}
+
+	.content h2 {
+		font-size: 55px;
+		margin: 75px 0 90px;
+		padding-bottom: 90px;
+	}
+
+	.featured-work {
+	    padding: 75px 130px;
+	}
+
+	.featured-work-thumb {
+		width: 40em;
+	}
+
+	.content {
+		text-align: center;
+	}
+
+	.content h3 {
+		font-size: 40px;
+	}
+
+	.category {
+	    height: 240px;
+	}
+
+	.category h1 {
+		padding-top: 150px;
+	}
+	
+	.project h2 {
+	    font-size: 40px;
+	    text-align: center;
+	}
+
+	.project-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.project-thumb {
+	    max-width: 33.333%;
+	    flex-basis: 33.333%;
+	}
+
+	.project h3 {
+		font-size: 40px;
+	}
+
+	.project .tool {
+		font-size: 14px;
+	}
+
+	.skills {
+		display: flex;
+	}
+
+	.skill-list,
+	.hobby-list {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	.profile-image {
+		order: -1;
+		background: none;
+	}
+
+	.about-bnr p {
+		margin: 30px 0 0;
+	}
+
+	.about-bnr {
+    	height: 420px;
+    }
+
+    .p-style {
+    	font-size: 1.2rem;
+	}
+
+	.wall-height {
+	    height: 40rem;
+	}
+
+	.live-website a {
+		font-size: 25px
+	}
+
+	.not-found-main h1 {
+		font-size: 90px;		
+		margin-bottom: 18px;
+	}
+
+	.not-found-main a {
+		font-size: 23px;
+	}
+}
+
+@media (min-width: 992px) {
+	.gn-items {
+		margin-right: 100px;
+	}
+
+	.gn a:after,
+	.gn a:before {
+		opacity: 0;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #8d91aa;
+		margin: 5px 0;
+		transition: opacity .35s;
+	}
+
+	.gn a:hover:after,
+	.gn a:hover:before {
+		opacity: 1;
+	}
+
+	.content p {
+	    margin: 0 80px;
+	    font-size: 26px;
+	}
+	.content a {
+	    font-size: 20px;
+	    border-radius: 30px;
+	    cursor: pointer;
+	    transition: all .35s ease-in;
+	}
+
+	.content a:hover {
+		color: #000;
+		background: #fff;
+	}
+
+	.featured-work {
+		padding: 95px 50px;
+	}
+
+	.intro {
+		font-size: 20px;
+	    letter-spacing: 1.2px;
+	}
+
+	.project-thumb {
+	    max-width: 31%;
+	    flex-basis: 31%;
+	}
+
+	.project-thumb img {
+	    transition: .35s;
+	}
+
+	.project-thumb img:hover {
+		filter: brightness(0.7);
+		transform: scale(1.04);
+	}
+
+	.about {
+		display: flex;
+		margin: 50px 0;
+	}
+
+	.profile-image {
+		flex-basis: 30%;
+    	max-width: 30%;
+	}
+
+	.profile {
+		flex-basis: 70%;
+    	max-width: 70%;
+	}
+
+	.process img {
+	    padding: 70px 120px;
+	}
+
+	.title h1 {
+	    font-size: 90px;
+	}
+
+	.featured-work {
+		display: flex;
+		align-items: center;
+	}
+
+	.featured-second {
+		flex-direction: row-reverse;
+	}
+
+	.featured-img {
+		margin: 0 auto;
+	}
+
+	.featured-img img {
+		width: 450px;
+	}
+
+	.featured-img,
+	.featured-des {
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+
+	.featured-work-thumb {
+		transition: .25s ease-in;
+	}
+
+	.featured-work-thumb:hover {
+		box-shadow: 0 10px 44px rgb(45 46 64 / 100%);
+	}
+
+	.live-website a {
+		transition: .25s;
+	}
+
+	.live-website a:hover {
+		transform: translateY(-5px) !important;
+	}
+
+	.footer img,
+	.footer .mail {
+		transition: .25s ease-in-out;
+	}
+
+	.footer img:hover,
+	.footer .mail:hover {
+		transform: translateY(-5px);
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.category h1 {
+		margin-left: 3.5em;
+	}
+
+	.theme-wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	.gn-items {
+		margin-right: 200px;
+	}
+
+	.gn li {
+		font-size: 20px;
+	}
+
+	.home-bnr h1 {
+		margin: 120px 0 5px;
+	}
+
+	.content h2 {
+    	font-size: 75px;
+    }
+
+    .project-thumb {
+	    max-width: 22%;
+	    flex-basis: 22%;
+	}
+
+	.project h3 {
+		padding: 0 10px;
+	}
+
+    .footer {
+    	height: 270px;
+    }
+
+    .footer h2 {
+    	font-size: 45px;
+    }
+
+    .footer p {
+	    font-size: 21px;
+	}
+
+	.process img {
+	    padding: 70px 200px;
+	}
+
+	.title h1 {
+		font-size: 70px;
+	}
+
+	.about-bnr p {
+	    margin: 30px 180px 0;
+	}
+
+	.about-bnr h1 {
+		margin-left: 6em;
+	}
+
+	.title h1 {
+		font-size: 90px;
+	}
+
+	.artifact-2-wall {
+		background-image: url(../images/tesla-thumb-2500.jpg);
+	}
+
+	.artifact-5-wall {
+		background-image: url(../images/sdd-thumb-2500.jpg);
+	}
+
+	.wall-height {
+		height: 100vh;
+	}
+
+	.not-found-main {
+		height: calc( 100vh - 270px);
+	}
+}
+
+@keyframes slideUp {
+	100% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes slideUp {
+	100% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes slideUpSub {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
